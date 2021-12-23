@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B13CCBF6-B239-453F-A042-10BBD3106A14"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "407FAFAB-00A8-4B10-ABCF-EEB70629A0FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tourApp/Model/CountyInfo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "CountyInfo"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "407FAFAB-00A8-4B10-ABCF-EEB70629A0FC - 4050f9624048e8cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tourApp.CountyInfo.deinit"
+                  moduleName = "tourApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kjy/Desktop/tourApp/tourApp/Model/CountyInfo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "407FAFAB-00A8-4B10-ABCF-EEB70629A0FC - 7f0a84ce7ca162da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tourApp.CountyInfo.__deallocating_deinit"
+                  moduleName = "tourApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kjy/Desktop/tourApp/tourApp/Model/CountyInfo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
