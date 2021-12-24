@@ -16,6 +16,8 @@ class profileViewController: UIViewController {
     
     @IBOutlet weak var nicknameLabel: UILabel!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,13 +38,15 @@ class profileViewController: UIViewController {
         self.backImageView.layer.cornerRadius = 50
         
         guard let name = user.kakaoAccount?.profile?.nickname as? String else { return }
-        nicknameLabel.text = "이름 : \(name)"
+        nicknameLabel.text = "\(name) 님"
         
         let url = user.kakaoAccount?.profile?.profileImageUrl
         let data = try? Data(contentsOf: url!)
         
         profileImageView.image = UIImage(data: data!)
         profileImageView.layer.cornerRadius = 45
+        
+
     }
 
     @IBAction func logOut(_ sender: Any) {

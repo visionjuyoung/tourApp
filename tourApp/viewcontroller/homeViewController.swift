@@ -46,7 +46,7 @@ class homeViewController: TabmanViewController {
         bar.layout.alignment = .centerDistributed
         bar.layout.contentMode = .fit
         
-        addBar(bar, dataSource: self, at: .top)
+        addBar(bar, dataSource: self, at: .bottom)
     }
 }
 

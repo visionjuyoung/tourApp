@@ -27,8 +27,6 @@ class ViewController: UIViewController {
                     print(error)
                 }
                 else {
-                    print("loginWithKakaoAccount() success.")
-
                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabMenu") as? UITabBarController else { return }
                                        self.present(vc, animated: true, completion: nil)
                     _ = oauthToken

@@ -9,6 +9,8 @@ import UIKit
 
 class spotTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var spotImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -22,14 +24,26 @@ class spotTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        spotImage.layer.cornerRadius = 10
         // Configure the view for the selected state
     }
     
-    func setData(data: (TourInfoResponse), index: Int) {
-        nameLabel.text = data.result[index].tourNm
-        addressLabel.text = data.result[index].adres
-        telnoLabel.text = data.result[index].telno
-        genreLabel.text = data.result[index].tourSe
+    func setData(data: detail) {
+        nameLabel.text = data.tourNm
+        addressLabel.text = data.adres
+        telnoLabel.text = data.telno
+        genreLabel.text = data.tourSe
+        
+        let url = URL(string: data.tourImg!)
+//        do{
+//            let data = try Data(contentsOf: url!)
+//            spotImage.image = UIImage(data: data)
+//        } catch {
+//
+//        }
+        let xurl = URL(string: "https://tour.chungbuk.go.kr/site/www/images/common/no_img.jpg")
+        spotImage.load(url: url ?? xurl!)
     }
-    
 }
+
+extension UIImageView { func load(url: URL) { DispatchQueue.global().async { [weak self] in if let data = try? Data(contentsOf: url) { if let image = UIImage(data: data) { DispatchQueue.main.async { self?.image = image } } } } } }

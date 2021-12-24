@@ -27,6 +27,10 @@
 		4B91F71A2774749800365BED /* TourInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B91F7192774749800365BED /* TourInfoRequest.swift */; };
 		4B91F71D27748A3600365BED /* spotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B91F71B27748A3600365BED /* spotTableViewCell.swift */; };
 		4B91F71E27748A3600365BED /* spotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B91F71C27748A3600365BED /* spotTableViewCell.xib */; };
+		4BAEA2722775A2D200D6CA38 /* SpotObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA2712775A2D200D6CA38 /* SpotObject.swift */; };
+		4BAEA2742775AF2F00D6CA38 /* WeatherInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA2732775AF2F00D6CA38 /* WeatherInfoResponse.swift */; };
+		4BAEA2762775B13500D6CA38 /* WeatherInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA2752775B13500D6CA38 /* WeatherInfoRequest.swift */; };
+		4BAEA2782775CB0600D6CA38 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAEA2772775CB0600D6CA38 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		4B91F7192774749800365BED /* TourInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoRequest.swift; sourceTree = "<group>"; };
 		4B91F71B27748A3600365BED /* spotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotTableViewCell.swift; sourceTree = "<group>"; };
 		4B91F71C27748A3600365BED /* spotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = spotTableViewCell.xib; sourceTree = "<group>"; };
+		4BAEA2712775A2D200D6CA38 /* SpotObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotObject.swift; sourceTree = "<group>"; };
+		4BAEA2732775AF2F00D6CA38 /* WeatherInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoResponse.swift; sourceTree = "<group>"; };
+		4BAEA2752775B13500D6CA38 /* WeatherInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoRequest.swift; sourceTree = "<group>"; };
+		4BAEA2772775CB0600D6CA38 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5A8864D219AA79A66E64A258 /* Pods_tourApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tourApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98A7ACAEB69980991F3B431 /* Pods-tourApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tourApp.debug.xcconfig"; path = "Target Support Files/Pods-tourApp/Pods-tourApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +129,7 @@
 				4B91F70727732E4D00365BED /* secondViewController.swift */,
 				4B91F70927732E5500365BED /* thirdViewController.swift */,
 				4B91F70B27745B8500365BED /* countyListViewController.swift */,
+				4BAEA2772775CB0600D6CA38 /* DetailViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -142,6 +151,9 @@
 				4B91F7192774749800365BED /* TourInfoRequest.swift */,
 				4B91F715277466D000365BED /* TourInfoResponse.swift */,
 				4B91F7172774700A00365BED /* CountyInfo.swift */,
+				4BAEA2712775A2D200D6CA38 /* SpotObject.swift */,
+				4BAEA2732775AF2F00D6CA38 /* WeatherInfoResponse.swift */,
+				4BAEA2752775B13500D6CA38 /* WeatherInfoRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,13 +290,17 @@
 				4B91F6EE277319D200365BED /* AppDelegate.swift in Sources */,
 				4B91F71127745F9300365BED /* countyTableViewCell.swift in Sources */,
 				4B91F6F0277319D200365BED /* SceneDelegate.swift in Sources */,
+				4BAEA2722775A2D200D6CA38 /* SpotObject.swift in Sources */,
 				4B91F70427731C8300365BED /* profileViewController.swift in Sources */,
+				4BAEA2782775CB0600D6CA38 /* DetailViewController.swift in Sources */,
 				4B91F70227731C7900365BED /* homeViewController.swift in Sources */,
 				4B91F71A2774749800365BED /* TourInfoRequest.swift in Sources */,
 				4B91F70C27745B8500365BED /* countyListViewController.swift in Sources */,
+				4BAEA2762775B13500D6CA38 /* WeatherInfoRequest.swift in Sources */,
 				4B91F7182774700A00365BED /* CountyInfo.swift in Sources */,
 				4B91F70A27732E5500365BED /* thirdViewController.swift in Sources */,
 				4B91F70627732E4300365BED /* firstViewController.swift in Sources */,
+				4BAEA2742775AF2F00D6CA38 /* WeatherInfoResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,12 +14,19 @@ class firstViewController: UIViewController {
     var locationParam: String = ""
     
     var spotCount: Int = 0
+    
+    var spots: [detail] = []
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var naviBar: UINavigationBar!
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        naviBar.topItem?.title = "관광지"
+    
         let county = CountyInfo.shared
         
         guard let name = county.county as? String else { return }
@@ -51,6 +58,8 @@ class firstViewController: UIViewController {
             return
         }
         TourInfoRequest().getCountyTourSpot(self, data: key)
+        WeatherInfoRequest().getCountyTourSpot(self, lat: 36.634836, lng: 127.478379)
+        setTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,29 +71,32 @@ class firstViewController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "spotTableViewCell", bundle: nil), forCellReuseIdentifier: "spotTableViewCell")
     }
-}
-
-extension firstViewController {
-   
+    
     func didSuccess(_ response: TourInfoResponse) {
-        print(response)
+        spots = response.result
+        self.tableView.reloadData()
     }
     
-    func setCell(cell: spotTableViewCell) {
-        
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
+    
 }
 
 extension firstViewController: UITableViewDataSource, UITableViewDelegate {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return spotCount
+        
+        return spots.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "spotTableViewCell") as? spotTableViewCell else { return UITableViewCell() }
+        cell.setData(data: spots[indexPath.row])
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
 }

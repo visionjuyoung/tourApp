@@ -15,6 +15,7 @@ struct TourInfoResponse: Decodable {
     var searchCnd: String
     var searchKrwd: String
     var status: String
+    
 }
 
 struct detail: Decodable {
