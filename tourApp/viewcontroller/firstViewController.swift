@@ -58,7 +58,6 @@ class firstViewController: UIViewController {
             return
         }
         TourInfoRequest().getCountyTourSpot(self, data: key)
-        WeatherInfoRequest().getCountyTourSpot(self, lat: 36.634836, lng: 127.478379)
         setTable()
     }
     
@@ -99,4 +98,23 @@ extension firstViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+            return
+        }
+        vc.areaSe = spots[indexPath.row].areaSe
+        vc.lng = spots[indexPath.row].lng
+        vc.tourImg = spots[indexPath.row].tourImg ?? "https://tour.chungbuk.go.kr/site/www/images/common/no_img.jpg"
+        vc.telno = spots[indexPath.row].telno ?? ""
+        vc.tourSe = spots[indexPath.row].tourSe
+        vc.tourNm = spots[indexPath.row].tourNm
+        vc.adres = spots[indexPath.row].adres
+        vc.lat = spots[indexPath.row].lat
+        vc.intrcn = spots[indexPath.row].intrcn ?? ""
+        vc.operTime = spots[indexPath.row].operTime ?? ""
+        
+        present(vc, animated: true, completion: nil)
+    }
 }
+

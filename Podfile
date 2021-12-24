@@ -9,6 +9,7 @@ target 'tourApp' do
   pod 'KakaoSDKAuth'
   pod 'KakaoSDKUser'
   pod 'Tabman', '~> 2.11'
+  pod 'AlamofireImage', '~> 4.1'
   # Pods for tourApp
 
 end

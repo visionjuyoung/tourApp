@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.5.0)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
   - KakaoSDKAuth (2.8.4):
     - KakaoSDKCommon (= 2.8.4)
   - KakaoSDKCommon (2.8.4):
@@ -16,6 +18,7 @@ PODS:
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
+  - AlamofireImage (~> 4.1)
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
@@ -24,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireImage
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
@@ -32,12 +36,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   KakaoSDKAuth: b9b693995f98b1821ccd22b39d383e1dede5ca45
   KakaoSDKCommon: 33c9902ee9ce13e9d1cac3549896406229836ff5
   KakaoSDKUser: d878977e0ba6b365cfeac3b6319cdf4231713bea
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: b68ea553990908e1ffde443201093ab202fc6ea6
+PODFILE CHECKSUM: cdad62c8c8cd7f85875b69749c744ff4ebea5c81
 
 COCOAPODS: 1.11.2

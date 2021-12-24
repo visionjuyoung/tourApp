@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class spotTableViewCell: UITableViewCell {
 
@@ -19,6 +21,12 @@ class spotTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView?.af_cancelImageRequest()
+        imageView?.image = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,12 +43,6 @@ class spotTableViewCell: UITableViewCell {
         genreLabel.text = data.tourSe
         
         let url = URL(string: data.tourImg!)
-//        do{
-//            let data = try Data(contentsOf: url!)
-//            spotImage.image = UIImage(data: data)
-//        } catch {
-//
-//        }
         let xurl = URL(string: "https://tour.chungbuk.go.kr/site/www/images/common/no_img.jpg")
         spotImage.load(url: url ?? xurl!)
     }

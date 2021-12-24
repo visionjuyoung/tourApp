@@ -150,10 +150,10 @@
 			children = (
 				4B91F7192774749800365BED /* TourInfoRequest.swift */,
 				4B91F715277466D000365BED /* TourInfoResponse.swift */,
+				4BAEA2752775B13500D6CA38 /* WeatherInfoRequest.swift */,
+				4BAEA2732775AF2F00D6CA38 /* WeatherInfoResponse.swift */,
 				4B91F7172774700A00365BED /* CountyInfo.swift */,
 				4BAEA2712775A2D200D6CA38 /* SpotObject.swift */,
-				4BAEA2732775AF2F00D6CA38 /* WeatherInfoResponse.swift */,
-				4BAEA2752775B13500D6CA38 /* WeatherInfoRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
