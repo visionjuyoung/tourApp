@@ -3,7 +3,7 @@
 ### 사용 라이브러리
 - Alamofire
 - Tabman
-- Kakao Login API
+- Kakao Login/Authentication
 
 ### open API 출처
 - 관광자원 정보 : https://tour.chungbuk.go.kr/openapi/tourInfo/stay.do
