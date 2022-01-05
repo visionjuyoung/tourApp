@@ -66,6 +66,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     func didSuccess(_ response: WetherInfoResponse) {
         currentWeather = response.weather
         weather = currentWeather[0].description
+        //view.reloadInputViews()
     }
     
     func setView() {
